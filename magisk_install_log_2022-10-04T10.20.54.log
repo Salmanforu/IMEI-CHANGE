@@ -1,0 +1,82 @@
+- Target image: /dev/block/sda15
+- Device platform: arm64-v8a
+- Installing: 25.2 (25200)
+- Unpacking boot image
+Parsing boot image: [/dev/block/sda15]
+HEADER_VER      [1]
+KERNEL_SZ       [45703180]
+RAMDISK_SZ      [13240706]
+SECOND_SZ       [0]
+RECOV_DTBO_SZ   [1835268]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2021-08]
+PAGESIZE        [2048]
+NAME            [SRPRK21D006RU]
+CMDLINE         [androidboot.selinux=permissive androidboot.selinux=permissive]
+CHECKSUM        [ea637b393706ffc1860be51741dea0eabd206984000000000000000000000000]
+KERNEL_FMT      [raw]
+RAMDISK_FMT     [gzip]
+SAMSUNG_SEANDROID
+VBMETA
+- Checking ramdisk status
+Loading cpio: [ramdisk.cpio]
+- Magisk patched boot image detected
+Loading cpio: [ramdisk.cpio]
+Remove [.backup]
+Remove [.backup/.magisk]
+Remove [overlay.d]
+Remove [overlay.d/sbin]
+Remove [overlay.d/sbin/magisk32.xz]
+Remove [overlay.d/sbin/magisk64.xz]
+Remove [.backup/.rmlist]
+Move [.backup/init] -> [init]
+Dump cpio: [ramdisk.cpio]
+- Patching ramdisk
+Loading cpio: [ramdisk.cpio]
+Add entry [init] (0750)
+Create directory [overlay.d] (0750)
+Create directory [overlay.d/sbin] (0750)
+Add entry [overlay.d/sbin/magisk32.xz] (0644)
+Add entry [overlay.d/sbin/magisk64.xz] (0644)
+Patch with flag KEEPVERITY=[true] KEEPFORCEENCRYPT=[false]
+Loading cpio: [ramdisk.cpio.orig]
+Backup mismatch entry: [init] -> [.backup/init]
+Record new entry: [overlay.d] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk32.xz] -> [.backup/.rmlist]
+Record new entry: [overlay.d/sbin/magisk64.xz] -> [.backup/.rmlist]
+Create directory [.backup] (0000)
+Add entry [.backup/.magisk] (0000)
+Dump cpio: [ramdisk.cpio]
+- Repacking boot image
+Parsing boot image: [/dev/block/sda15]
+HEADER_VER      [1]
+KERNEL_SZ       [45703180]
+RAMDISK_SZ      [13240706]
+SECOND_SZ       [0]
+RECOV_DTBO_SZ   [1835268]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2021-08]
+PAGESIZE        [2048]
+NAME            [SRPRK21D006RU]
+CMDLINE         [androidboot.selinux=permissive androidboot.selinux=permissive]
+CHECKSUM        [ea637b393706ffc1860be51741dea0eabd206984000000000000000000000000]
+KERNEL_FMT      [raw]
+RAMDISK_FMT     [gzip]
+SAMSUNG_SEANDROID
+VBMETA
+Repack to boot image: [new-boot.img]
+HEADER_VER      [1]
+KERNEL_SZ       [45703180]
+RAMDISK_SZ      [13362863]
+SECOND_SZ       [0]
+RECOV_DTBO_SZ   [1835268]
+OS_VERSION      [11.0.0]
+OS_PATCH_LEVEL  [2021-08]
+PAGESIZE        [2048]
+NAME            [SRPRK21D006RU]
+CMDLINE         [androidboot.selinux=permissive androidboot.selinux=permissive]
+CHECKSUM        [066216f4400bb96f179362adce08d38a4e69b49f000000000000000000000000]
+- Flashing new boot image
+RULESDIR=/dev/Yx7qVQ2/.magisk/mirror/cache/magisk
+- All done!
